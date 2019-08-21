@@ -17,14 +17,16 @@ config = tf.ConfigProto()
 config.gpu_options.allow_growth=True
 sess = tf.Session(config=config)
 
+home_dir = os.path.dirname(os.path.abspath(__file__))
+
 """=================================================================================================================="""
 fill_color = '#ffffff'  # your background
 
-input_dir = 'D:/AI/tests/input/'
-resized_dir = 'D:/AI/tests/resized/'
-cut_dir = 'D:/AI/tests/cut/'
-edges_dir = 'D:/AI/tests/edges/'
-output_dir = 'D:/AI/tests/output/'
+input_dir = home_dir+'/input/'
+resized_dir = home_dir+'/resized/'
+cut_dir = home_dir+'/cut/'
+edges_dir = home_dir+'/edges/'
+output_dir = home_dir+'/output/'
 
 if not os.path.exists(output_dir):
     os.makedirs(output_dir)
