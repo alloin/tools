@@ -55,7 +55,7 @@ print(str(len(os.listdir(output_dir))) + " output files found.")
 subprocess.call(["python", "process.py", "--input_dir", input_dir, "--output_dir", resized_dir, "--operation", "resize"])
 """=================================================================================================================="""
 """
-!wget http://download.tensorflow.org/models/deeplabv3_mnv2_pascal_train_aug_2018_01_29.tar.gz
+!wget http://download.tensorflow.org/models/deeplabv3_mnv2_pascal_train_aug_2018_01_29.tar.gz 
 !wget http://download.tensorflow.org/models/deeplabv3_pascal_train_aug_2018_01_04.tar.gz
 
 !mkdir mobile_net_model
@@ -65,9 +65,6 @@ subprocess.call(["python", "process.py", "--input_dir", input_dir, "--output_dir
 
 !rm deeplabv3_mnv2_pascal_train_aug_2018_01_29.tar.gz
 !rm deeplabv3_pascal_train_aug_2018_01_04.tar.gz
-!wget http://ohrly.net/dogs_dataset.rar
-!apt install unrar
-!unrar x /content/dogs_dataset.rar 'D:/AI/tests/1/'
 """
 class DeepLabModel(object):
     """Class to load deeplab model and run inference."""
